@@ -47,6 +47,11 @@ class Country
 
 	public function __construct(CountryData $data)
 	{
+		$this->edit($data);
+	}
+
+	public function edit(CountryData $data): void
+	{
 		$this->name = $data->name;
 		$this->code_currency = $data->codeCurrency;
 		$this->code_continent = $data->codeContinent;
