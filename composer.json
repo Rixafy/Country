@@ -1,0 +1,14 @@
+{
+    "name": "rixafy/country",
+    "description": "Country CRUD model using Doctrine ORM",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rixafy",
+            "email": "rixafy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
