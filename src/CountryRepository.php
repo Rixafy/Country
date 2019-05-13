@@ -53,7 +53,7 @@ class CountryRepository
 	{
 		/** @var Country $country */
 		$country = $this->getRepository()->findOneBy([
-			'code_alpha2' => $codeAlpha2
+			'codeAlpha2' => $codeAlpha2
 		]);
 
 		if ($country === null) {

@@ -25,25 +25,25 @@ class Country
 	 * @ORM\Column(type="string", length=3)
 	 * @var string
 	 */
-	private $code_currency;
+	private $codeCurrency;
 
 	/**
 	 * @ORM\Column(type="string", length=2)
 	 * @var string
 	 */
-	private $code_continent;
+	private $codeContinent;
 
 	/**
 	 * @ORM\Column(type="string", length=2, unique=true)
 	 * @var string
 	 */
-	private $code_alpha2;
+	private $codeAlpha2;
 
 	/**
 	 * @ORM\Column(type="string", length=2)
 	 * @var string
 	 */
-	private $code_language;
+	private $codeLanguage;
 
 	public function __construct(CountryData $data)
 	{
@@ -53,10 +53,10 @@ class Country
 	public function edit(CountryData $data): void
 	{
 		$this->name = $data->name;
-		$this->code_currency = $data->codeCurrency;
-		$this->code_continent = $data->codeContinent;
-		$this->code_alpha2 = $data->codeAlpha2;
-		$this->code_language = $data->codeLanguage;
+		$this->codeCurrency = $data->codeCurrency;
+		$this->codeContinent = $data->codeContinent;
+		$this->codeAlpha2 = $data->codeAlpha2;
+		$this->codeLanguage = $data->codeLanguage;
 	}
 
 	public function getName(): string
@@ -66,21 +66,21 @@ class Country
 
 	public function getCodeCurrency(): string
 	{
-		return $this->code_currency;
+		return $this->codeCurrency;
 	}
 
 	public function getCodeAlpha2(): string
 	{
-		return $this->code_alpha2;
+		return $this->codeAlpha2;
 	}
 
 	public function getCodeLanguage(): string
 	{
-		return $this->code_language;
+		return $this->codeLanguage;
 	}
 
 	public function getCodeContinent(): string
 	{
-		return $this->code_continent;
+		return $this->codeContinent;
 	}
 }
