@@ -84,4 +84,12 @@ class CountryRepository
 	{
 		return $this->getRepository()->createQueryBuilder('e');
 	}
+
+	/**
+	 * @return Country[]
+	 */
+	public function getAll(): array
+	{
+		return $this->getQueryBuilderForAll()->getQuery()->execute();
+	}
 }

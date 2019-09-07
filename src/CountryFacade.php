@@ -74,4 +74,12 @@ class CountryFacade
 	{
 		return $this->countryRepository->getByName($name);
 	}
+
+	/**
+	 * @return Country[]
+	 */
+	public function getAll(): array
+	{
+		return $this->countryRepository->getAll();
+	}
 }
