@@ -42,7 +42,7 @@ final class CountryUpdateCommand extends Command
 		$this->setDescription('Updates countries rates from third-party service.');
 	}
 
-	public function execute(InputInterface $input, OutputInterface $output): void
+	public function execute(InputInterface $input, OutputInterface $output): int
 	{
 		$content = @file_get_contents('http://country.io/names.json');
 		if ($content !== false) {
@@ -120,5 +120,7 @@ final class CountryUpdateCommand extends Command
 			}
 			$this->entityManager->flush();
 		}
+		
+		return 0;
 	}
 }
