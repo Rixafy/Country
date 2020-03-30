@@ -7,17 +7,17 @@ namespace Rixafy\Country;
 class CountryData
 {
 	/** @var string */
-	public $name;
+	public $name = '';
 
 	/** @var string */
-	public $codeCurrency;
+	public $codeCurrency = '';
 
 	/** @var string */
-	public $codeContinent;
+	public $codeContinent = '';
 
 	/** @var string */
-	public $codeAlpha2;
+	public $codeAlpha2 = '';
 
 	/** @var string */
-	public $codeLanguage;
+	public $codeLanguage = '';
 }

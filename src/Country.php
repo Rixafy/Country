@@ -63,10 +63,20 @@ class Country
 	{
 		return $this->name;
 	}
+	
+	public function changeName(string $name): void
+	{
+		$this->name = $name;
+	}
 
 	public function getCodeCurrency(): string
 	{
 		return $this->codeCurrency;
+	}
+
+	public function changeCodeCurrency(string $currency): void
+	{
+		$this->codeCurrency = $currency;
 	}
 
 	public function getCodeAlpha2(): string
@@ -79,8 +89,18 @@ class Country
 		return $this->codeLanguage;
 	}
 
+	public function changeCodeLanguage(string $codeLanguage): void
+	{
+		$this->codeLanguage = $codeLanguage;
+	}
+
 	public function getCodeContinent(): string
 	{
 		return $this->codeContinent;
+	}
+
+	public function changeCodeContinent(string $codeContinent): void
+	{
+		$this->codeContinent = $codeContinent;
 	}
 }

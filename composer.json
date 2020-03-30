@@ -18,6 +18,7 @@
     "require": {
         "php": "^7.2",
         "doctrine/orm": "2.6 - 3.0",
-        "rixafy/doctrine-traits": "dev-master"
+        "rixafy/doctrine-traits": "dev-master",
+        "ext-json": "*"
     }
 }
