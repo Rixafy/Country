@@ -7,43 +7,26 @@ namespace Rixafy\Country;
 use Doctrine\ORM\Mapping as ORM;
 use Rixafy\DoctrineTraits\UniqueTrait;
 
-/**
- * @ORM\Entity
- * @ORM\Table(name="country")
- */
+#[ORM\Entity]
+#[ORM\Table(name: 'country')]
 class Country
 {
 	use UniqueTrait;
 
-	/**
-	 * @ORM\Column(type="string", unique=true)
-	 * @var string
-	 */
-	private $name;
+	#[ORM\Column(unique: true)]
+	private string $name;
 
-	/**
-	 * @ORM\Column(type="string", length=3)
-	 * @var string
-	 */
-	private $codeCurrency;
+	#[ORM\Column(length: 3)]
+	private string $codeCurrency;
 
-	/**
-	 * @ORM\Column(type="string", length=2)
-	 * @var string
-	 */
-	private $codeContinent;
+	#[ORM\Column(length: 2)]
+	private string $codeContinent;
 
-	/**
-	 * @ORM\Column(type="string", length=2, unique=true)
-	 * @var string
-	 */
-	private $codeAlpha2;
+	#[ORM\Column(length: 2, unique: true)]
+	private string $codeAlpha2;
 
-	/**
-	 * @ORM\Column(type="string", length=2)
-	 * @var string
-	 */
-	private $codeLanguage;
+	#[ORM\Column(length: 2)]
+	private string $codeLanguage;
 
 	public function __construct(CountryData $data)
 	{

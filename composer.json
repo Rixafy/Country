@@ -17,8 +17,8 @@
     },
     "require": {
         "php": ">=7.2",
-        "doctrine/orm": "2.6 - 3.0",
-        "rixafy/doctrine-traits": "^1.0",
+        "doctrine/orm": ">=2.6",
+        "rixafy/doctrine-traits": "^2.0",
         "ext-json": "*"
     }
 }
