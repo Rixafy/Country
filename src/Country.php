@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Rixafy\Country;
 
 use Doctrine\ORM\Mapping as ORM;
-use Rixafy\DoctrineTraits\UniqueTrait;
+use Rixafy\DoctrineTraits\UniqueUlidTrait;
 
 #[ORM\Entity]
 #[ORM\Table(name: 'country')]
 class Country
 {
-	use UniqueTrait;
+	use UniqueUlidTrait;
 
 	#[ORM\Column(unique: true)]
 	private string $name;
